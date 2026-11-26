@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Georgia, serif;
+    color: white;
+    text-align: center;
+    background: linear-gradient(-45deg,
+        #5c123b, #ad315f, #ed7ba5, #8d174f);
+    background-size: 400% 400%;
+    animation: background 12s ease infinite;
+}
+
+@keyframes background {
+    0% {background-position: 0 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0 50%;}
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 92%;
+    max-width: 680px;
+    margin: 35px auto;
+    padding: 30px 22px;
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 28px;
+    background: rgba(255,255,255,.13);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 10px 45px rgba(0,0,0,.3);
+}
+
+.top-label {
+    letter-spacing: 4px;
+    font-size: .8rem;
+    color: #ffe1ed;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: clamp(2rem, 7vw, 3.1rem);
+    color: #fff0f5;
+    text-shadow: 0 0 20px #ff9fc4;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {text-shadow: 0 0 5px white;}
+    to {text-shadow: 0 0 25px #ffc0d8;}
+}
+
+.subtitle {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.date {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 12px 0;
+    border-radius: 30px;
+    background: rgba(255,255,255,.2);
+    color: #fff0f5;
+    letter-spacing: 1px;
+}
+
+.photo-frame {
+    width: min(85%, 350px);
+    margin: 25px auto;
+    padding: 10px;
+    background: #fff0f5;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255,190,215,.6);
+    animation: photoFloat 4s ease-in-out infinite;
+}
+
+@keyframes photoFloat {
+    0%,100% {transform: translateY(0) rotate(-2deg);}
+    50% {transform: translateY(-10px) rotate(2deg);}
+}
+
+.photo-frame img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    display: block;
+    border-radius: 13px;
+}
+
+.photo-caption {
+    color: #a52b62;
+    padding: 13px 5px 5px;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.section-title {
+    margin: 25px 0;
+    font-size: 1.5rem;
+    color: #ffe3ed;
+}
+
+#typedMessage {
+    text-align: left;
+    white-space: pre-wrap;
+    font-size: 1.08rem;
+    line-height: 2;
+    min-height: 260px;
+}
+
+.cursor {
+    animation: blink .7s infinite;
+}
+
+@keyframes blink {
+    50% {opacity: 0;}
+}
+
+button {
+    border: none;
+    border-radius: 40px;
+    padding: 15px 25px;
+    margin: 20px 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #fff0f5;
+    color: #a52b62;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #ffc0d8;
+}
+
+#surprise {
+    display: none;
+    padding: 22px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.16);
+    font-size: 1.05rem;
+    line-height: 2;
+    animation: reveal 1s ease;
+}
+
+#surprise h2 {
+    color: #ffe1ed;
+    margin-bottom: 20px;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.footer {
+    margin-top: 30px;
+    line-height: 2;
+    font-size: 1.1rem;
+}
+
+.heart, .petal {
+    position: fixed;
+    bottom: -45px;
+    pointer-events: none;
+    z-index: 1;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+    }
+    15% {opacity: .9;}
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width:480px) {
+    .container {
+        padding: 25px 17px;
+    }
+    #typedMessage {
+        font-size: 1rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="top-label">
+        A SPECIAL DAY FOR A SPECIAL SOUL
+    </div>
+
+    <h1>Happy Birthday,<br>My Love! ❤️</h1>
+
+    <p class="subtitle">
+        Today the world celebrates you,
+        and I celebrate the blessing of having you in my life.
+    </p>
+
+    <div class="date">
+        🌹 26 NOVEMBER 2026 🌹
+    </div>
+
+    <!-- HER PHOTOGRAPH -->
+    <div class="photo-frame">
+        <img src="1000301445.jpg"
+             alt="My beautiful love">
+        <div class="photo-caption">
+            My favourite person, my beautiful blessing ❤️
+        </div>
+    </div>
+
+    <h2 class="section-title">
+        A Letter From My Heart 💌
+    </h2>
+
+    <p id="typedMessage"></p>
+    <span class="cursor">❤️</span>
+
+    <br>
+
+    <button id="surpriseBtn" onclick="showSurprise()">
+        🎁 Open Your Special Surprise
+    </button>
+
+    <!-- HIDDEN SURPRISE -->
+    <div id="surprise">
+
+        <h2>To My Forever Love ❤️</h2>
+
+        <p>
+            My Love,
+
+            If there is one thing I wish you could understand
+            completely, it is how much you mean to me.
+
+            Sometimes I look at you and wonder how I got so
+            lucky to have someone like you in my life.
+
+            You are not just someone I love.
+            You are someone I genuinely cherish.
+
+            I want to be there when you achieve your dreams,
+            when you need encouragement, when you are happy,
+            and even when life feels difficult.
+
+            I want to celebrate your little victories,
+            listen to your stories, make you laugh,
+            and remind you that you never have to question
+            how special you are to me.
+
+            I cannot promise that every day will be perfect,
+            but I can promise that my intentions towards you
+            are genuine.
+
+            I want to keep choosing you, learning you,
+            appreciating you, and growing with you.
+
+            If life gave me another chance to choose,
+            I would still hope that our paths would meet.
+
+            You deserve beautiful things, beautiful moments,
+            and a love that makes you feel appreciated.
+
+            <br><br>
+
+            <strong>
+                Happy birthday, My Love. ❤️
+            </strong>
+
+            <br><br>
+
+            You are one of my favourite chapters
+            in this beautiful story called life.
+
+            <br><br>
+
+            I LOVE YOU. TODAY, TOMORROW
+            AND IN EVERY TOMORROW AFTER THAT. 💍
+
+            <br><br>
+
+            🌹❤️🌹
+        </p>
+
+    </div>
+
+    <div class="footer">
+        With all my love,<br>
+        <strong>Dancan ❤️</strong>
+        <br>
+        Forever grateful for you.
+        <br><br>
+        <span>Made with love, especially for you. 🌹</span>
+    </div>
+
+</div>
+
+<script>
+
+// MAIN LOVE LETTER TYPING ANIMATION
+
+const message = `My Dearest My Love, ❤️
+
+Happy birthday, sweetheart!
+
+Today is a very special day because it marks the day you came into this world.
+
+I wish I could put into words everything my heart feels for you, but sometimes words are simply not enough.
+
+You have brought a kind of happiness into my life that I never want to take for granted.
+
+Your smile, your presence, your laughter and even the little things you do mean more to me than you probably realise.
+
+I want you to know that I see you, I appreciate you, and I cherish you.
+
+As you begin another beautiful year of your life, I pray that God guides your steps, protects your dreams and fills your heart with genuine happiness.
+
+May you never lose the beautiful person you are.
+
+May you find reasons to smile even on difficult days.
+
+May every effort you make lead you closer to the life you dream of.
+
+I may not have the whole world to offer you, but I have a heart that genuinely loves and appreciates you.
+
+Thank you for being part of my life.
+
+Today, I celebrate you.
+
+Happy birthday, My Love. ❤️🌹`;
+
+let index = 0;
+
+function typeMessage() {
+    if(index < message.length) {
+        document.getElementById("typedMessage")
+        .textContent += message.charAt(index);
+
+        index++;
+        setTimeout(typeMessage, 42);
+    }
+}
+
+typeMessage();
+
+
+// FLOATING HEARTS AND ROSE PETALS
+
+function createFloatingItem(burst = false) {
+
+    const item = document.createElement("div");
+
+    const petals = ["🌹", "🌸", "🌷"];
+    const hearts = ["❤️", "💕", "💖", "💗", "💘"];
+
+    const isPetal = Math.random() > .65;
+
+    item.className = isPetal ? "petal" : "heart";
+
+    item.textContent = isPetal
+        ? petals[Math.floor(Math.random() * petals.length)]
+        : hearts[Math.floor(Math.random() * hearts.length)];
+
+    item.style.left = Math.random() * 100 + "vw";
+
+    item.style.fontSize =
+        (15 + Math.random() * 24) + "px";
+
+    item.style.animationDuration =
+        (burst ? 3 : 5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(item);
+
+    setTimeout(() => item.remove(), 10000);
+}
+
+setInterval(() => createFloatingItem(), 350);
+
+
+// SURPRISE BUTTON
+
+function showSurprise() {
+
+    const surprise = document.getElementById("surprise");
+
+    if(surprise.style.display !== "block") {
+
+        surprise.style.display = "block";
+
+        document.getElementById("surpriseBtn")
+        .textContent = "❤️ I LOVE YOU FOREVER ❤️";
+
+        // Romantic heart and rose explosion
+        for(let i = 0; i < 70; i++) {
+            setTimeout(() => createFloatingItem(true), i * 35);
+        }
+
+        surprise.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }
+}
+
+</script>
+
+</body>
+</html>
